@@ -13,54 +13,54 @@
 <body>
 
     <div class="theme-container">
-        <button id="theme-toggle">🌙 Modo Noche</button>
+        <button id="theme-toggle" aria-label="Cambiar tema visual de la página">🌙 Modo Noche</button>
     </div>
 
-    <div class="container" id="mainContainer">
+    <main class="container" id="mainContainer">
         
-        <div class="form-container" id="loginBlock">
+        <section class="form-container" id="loginBlock">
             <h2>Iniciar Sesión</h2>
             
             <div class="social-container">
-                <a href="#" class="social"><i class="fab fa-twitch"></i></a>
-                <a href="#" class="social"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social" aria-label="Iniciar sesión con Twitch"><i class="fab fa-twitch" aria-hidden="true"></i></a>
+                <a href="#" class="social" aria-label="Iniciar sesión con Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                <a href="#" class="social" aria-label="Iniciar sesión con Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="#" class="social" aria-label="Iniciar sesión con Tiktok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
             </div>
             
-            <span>Use su correo y contraseña</span>
+            <p class="form-instruction">Use su correo y contraseña</p>
             
             <form id="loginForm">
                 <div class="input-field">
-                    <i class="fas fa-envelope"></i>
-                    <input type="text" id="usuario" placeholder="Email" value="admin" required>
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <input type="text" id="usuario" placeholder="Email" value="admin" required aria-label="Correo electrónico">
                 </div>
                 <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" id="contrasena" placeholder="Contraseña" value="admin" required>
+                    <i class="fas fa-lock" aria-hidden="true"></i>
+                    <input type="password" id="contrasena" placeholder="Contraseña" value="admin" required aria-label="Contraseña">
                 </div>
                 
                 <a href="#" class="forgot-pass">¿Olvidaste tu contraseña?</a>
                 
                 <button type="submit" class="btn-main">INICIAR SESIÓN</button>
             </form>
-        </div>
+        </section>
 
-        <div class="form-container success-block" id="welcomeBlock" style="display: none;">
-            <div class="success-icon">🎉</div>
+        <section class="form-container success-block" id="welcomeBlock" style="display: none;">
+            <div class="success-icon" role="img" aria-label="Icono de celebración">🎉</div>
             <h2>¡Sesión Iniciada!</h2>
-            <p>Has ingresado correctamente a tu cuenta de SGG.</p>
-        </div>
+            <p class="success-text">Has ingresado correctamente a tu cuenta de SGG.</p>
+        </section>
 
-        <div class="overlay-container">
+        <section class="overlay-container">
             <div class="overlay">
                 <h1>¡Bienvenido!</h1>
-                <p>Ingrese sus datos personales para usar todas las funciones del sitio</p>
+                <p class="overlay-text">Ingrese sus datos personales para usar todas las funciones del sitio</p>
                 <button class="btn-ghost">Registrarse</button>
             </div>
-        </div>
+        </section>
 
-    </div>
+    </main>
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {

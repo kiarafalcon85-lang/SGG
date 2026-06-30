@@ -24,9 +24,15 @@ body.dark-mode .container {
     box-shadow: 0 14px 28px rgba(255,255,255,0.05), 0 10px 10px rgba(255,255,255,0.05);
 }
 
-body.dark-mode .form-container h2, 
-body.dark-mode .form-container span,
-body.dark-mode .success-block p {
+body.dark-mode .form-container h2 {
+    color: #ffffff;
+}
+
+body.dark-mode .form-container .form-instruction {
+    color: #e0e0e0;
+}
+
+body.dark-mode .success-block .success-text {
     color: #ffffff;
 }
 
@@ -38,12 +44,16 @@ body.dark-mode .input-field input {
     color: #ffffff;
 }
 
+body.dark-mode .input-field input::placeholder {
+    color: #bbb;
+}
+
 body.dark-mode .input-field i {
-    color: #aaa;
+    color: #ccc;
 }
 
 body.dark-mode .social {
-    border-color: #444;
+    border-color: #555;
     color: #fff;
 }
 
@@ -62,7 +72,8 @@ body.dark-mode #theme-toggle {
 
 #theme-toggle {
     background-color: #ffffff;
-    border: 1px solid #ddd;
+    color: #212121;
+    border: 1px solid #757575;
     padding: 0.6rem 1.2rem;
     border-radius: 20px;
     cursor: pointer;

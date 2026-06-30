@@ -5,7 +5,9 @@ const usuarios = [
 
 const form = document.getElementById("loginForm");
 const mensaje = document.getElementById("message");
+const themeBtn = document.getElementById("themeBtn");
 
+// Validación del Login
 form.addEventListener("submit", function(e){
     e.preventDefault();
 
@@ -17,25 +19,36 @@ form.addEventListener("submit", function(e){
     );
 
     if(valido){
-        mensaje.textContent = "Inicio de sesión correcto";
-    }else{
-        mensaje.textContent = "Usuario o contraseña incorrectos";
+        mensaje.textContent = "¡Inicio de sesión correcto! 🎉";
+        mensaje.style.color = "#48bb78"; // Verde
+    } else {
+        mensaje.textContent = "Usuario o contraseña incorrectos ❌";
+        mensaje.style.color = "#f56565"; // Rojo
     }
 });
 
-const themeBtn = document.getElementById("themeBtn");
+// Función para actualizar el texto del botón de tema
+function actualizarTextoBoton() {
+    if (document.body.classList.contains("dark")) {
+        themeBtn.textContent = "☀️ Modo Día";
+    } else {
+        themeBtn.textContent = "🌙 Modo Noche";
+    }
+}
 
+// Evento Click Modo Noche
 themeBtn.addEventListener("click", ()=>{
     document.body.classList.toggle("dark");
+    actualizarTextoBoton();
 
     localStorage.setItem(
         "theme",
-        document.body.classList.contains("dark")
-            ? "dark"
-            : "light"
+        document.body.classList.contains("dark") ? "dark" : "light"
     );
 });
 
-if(localStorage.getItem("theme")==="dark"){
+// Cargar tema guardado al iniciar
+if(localStorage.getItem("theme") === "dark"){
     document.body.classList.add("dark");
+    actualizarTextoBoton();
 }

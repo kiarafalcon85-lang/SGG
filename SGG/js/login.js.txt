@@ -8,7 +8,7 @@
     max-width: 100%;
     min-height: 500px;
     display: flex;
-    overflow: hidden; /* Corta los elementos que se salgan de las esquinas redondeadas */
+    overflow: hidden; 
 }
 
 /* Estilo para las secciones del lado izquierdo (Login y Éxito) */
@@ -96,7 +96,7 @@
     border-color: #880e4f;
 }
 
-/* Botón principal (Rosa Fuerte/Vino de la imagen) */
+/* Botón principal */
 .btn-main {
     border-radius: 8px;
     border: none;
@@ -114,16 +114,15 @@
     background-color: #ad1457;
 }
 
-/* SECCIÓN DERECHA: El panel rosa con la curva perfecta */
+/* SECCIÓN DERECHA: El panel rosa con la curva */
 .overlay-container {
     width: 50%;
-    background-color: #f06292; /* Color rosa vivo de la imagen */
+    background-color: #f06292; 
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    /* Truco CSS: border-radius gigante para imitar la curva exacta de la imagen */
     border-radius: 150px 0 0 150px; 
 }
 
@@ -161,7 +160,7 @@
     color: #f06292;
 }
 
-/* Estilos de la pantalla de bienvenida al ingresar con éxito */
+/* Pantalla de éxito */
 .success-block {
     display: flex;
     flex-direction: column;

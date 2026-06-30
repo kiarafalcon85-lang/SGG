@@ -1,23 +1,183 @@
-/* Estilos para el recuadro del sujeto de prueba */
-.test-credentials {
-    margin-top: 2rem;
-    padding: 0.75rem;
-    background-color: #f8f9fa;
-    border-left: 4px solid #007bff;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    color: #555;
-    text-align: left;
+/* Tarjeta contenedora principal */
+.container {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
+    position: relative;
+    width: 850px;
+    max-width: 100%;
+    min-height: 500px;
+    display: flex;
+    overflow: hidden; /* Corta los elementos que se salgan de las esquinas redondeadas */
 }
 
-.test-credentials p {
-    margin: 4px 0;
+/* Estilo para las secciones del lado izquierdo (Login y Éxito) */
+.form-container {
+    width: 50%;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
 }
 
-.test-credentials code {
-    background-color: #e9ecef;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-family: monospace;
-    color: #d63384;
+.form-container h2 {
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.form-container span {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+/* Iconos de redes sociales */
+.social-container {
+    margin: 10px 0 20px 0;
+}
+
+.social-container .social {
+    border: 1px solid #ddd;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 7px;
+    height: 40px;
+    width: 40px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.social-container .social:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+}
+
+/* Campos de entrada con icono incorporado */
+.input-field {
+    background-color: #eee;
+    margin: 8px 0;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.input-field i {
+    color: #888;
+    margin-right: 10px;
+}
+
+.input-field input {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Enlace de contraseña olvidada */
+.forgot-pass {
+    color: #880e4f;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin: 15px 0;
+    border-bottom: 1px solid transparent;
+}
+.forgot-pass:hover {
+    border-color: #880e4f;
+}
+
+/* Botón principal (Rosa Fuerte/Vino de la imagen) */
+.btn-main {
+    border-radius: 8px;
+    border: none;
+    background-color: #880e4f;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+.btn-main:hover {
+    background-color: #ad1457;
+}
+
+/* SECCIÓN DERECHA: El panel rosa con la curva perfecta */
+.overlay-container {
+    width: 50%;
+    background-color: #f06292; /* Color rosa vivo de la imagen */
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Truco CSS: border-radius gigante para imitar la curva exacta de la imagen */
+    border-radius: 150px 0 0 150px; 
+}
+
+.overlay {
+    padding: 0 40px;
+    text-align: center;
+}
+
+.overlay h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.overlay p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Botón transparente del lado derecho */
+.btn-ghost {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 12px 45px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.btn-ghost:hover {
+    background-color: #ffffff;
+    color: #f06292;
+}
+
+/* Estilos de la pantalla de bienvenida al ingresar con éxito */
+.success-block {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.5s ease;
+}
+
+.success-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.success-block h2 {
+    color: #c2185b;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }

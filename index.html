@@ -61,14 +61,12 @@
     </div>
 
     <script>
-        // 1. Lógica del Formulario de Login
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const usuario = document.getElementById('usuario').value;
             const contrasena = document.getElementById('contrasena').value;
 
             if (usuario === 'admin' && contrasena === 'admin') {
-                // Transición limpia: ocultamos login y mostramos éxito
                 document.getElementById('loginBlock').style.display = 'none';
                 document.getElementById('welcomeBlock').style.display = 'flex';
             } else {
@@ -76,7 +74,6 @@
             }
         });
 
-        // 2. Lógica del Modo Noche
         const themeToggle = document.getElementById('theme-toggle');
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');

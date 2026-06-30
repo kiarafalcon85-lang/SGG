@@ -1,4 +1,3 @@
-/* Reseteo global */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +5,7 @@
 }
 
 body {
-    background-color: #fce4ec; /* Fondo rosa pastel claro igual que la imagen */
+    background-color: #fce4ec;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
@@ -16,7 +15,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* --- CONFIGURACIÓN MODO NOCHE --- */
 body.dark-mode {
     background-color: #121212;
 }
@@ -55,7 +53,6 @@ body.dark-mode #theme-toggle {
     border-color: #555;
 }
 
-/* Botón flotante para cambiar tema */
 .theme-container {
     position: absolute;
     top: 20px;
@@ -74,6 +71,7 @@ body.dark-mode #theme-toggle {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: all 0.2s ease;
 }
+
 #theme-toggle:hover {
     transform: scale(1.05);
 }

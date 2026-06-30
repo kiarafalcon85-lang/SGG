@@ -1,57 +1,79 @@
-/* ==========================================================================
-   ESTILOS GLOBALES (Para todo el sitio web)
-   ========================================================================== */
-
-/* Reseteo básico para que todo mida lo mismo en cualquier navegador */
+/* Reseteo global */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Variables de color (Te facilitarán la vida para el cambio de tema más adelante) */
-:root {
-    --background-color: #f4f7f6;
-    --card-background: #ffffff;
-    --text-color: #333333;
-    --primary-color: #007bff;
-    --primary-hover: #0056b3;
 }
 
 body {
+    background-color: #fce4ec; /* Fondo rosa pastel claro igual que la imagen */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    transition: background-color 0.3s ease;
 }
 
-/* ==========================================================================
-   BOTÓN DE CAMBIAR TEMA
-   ========================================================================== */
+/* --- CONFIGURACIÓN MODO NOCHE --- */
+body.dark-mode {
+    background-color: #121212;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+    box-shadow: 0 14px 28px rgba(255,255,255,0.05), 0 10px 10px rgba(255,255,255,0.05);
+}
+
+body.dark-mode .form-container h2, 
+body.dark-mode .form-container span,
+body.dark-mode .success-block p {
+    color: #ffffff;
+}
+
+body.dark-mode .input-field {
+    background-color: #333333;
+}
+
+body.dark-mode .input-field input {
+    color: #ffffff;
+}
+
+body.dark-mode .input-field i {
+    color: #aaa;
+}
+
+body.dark-mode .social {
+    border-color: #444;
+    color: #fff;
+}
+
+body.dark-mode #theme-toggle {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+}
+
+/* Botón flotante para cambiar tema */
 .theme-container {
     position: absolute;
     top: 20px;
     right: 20px;
+    z-index: 100;
 }
 
 #theme-toggle {
-    background-color: var(--card-background);
-    color: var(--text-color);
+    background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 0.6rem 1.2rem;
     border-radius: 20px;
     cursor: pointer;
     font-size: 0.9rem;
-    font-weight: 500;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: all 0.2s ease;
 }
-
 #theme-toggle:hover {
-    background-color: #e9ecef;
     transform: scale(1.05);
-}
 }
